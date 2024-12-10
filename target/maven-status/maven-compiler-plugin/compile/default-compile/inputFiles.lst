@@ -1,0 +1,16 @@
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/PolicyApplication.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/config/ResourceHandlers.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/config/SwaggerConfig.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/controller/PolicyCommandController.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/controller/PolicyQueryController.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/exception/ExceptionErrorStructure.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/exception/GlobalExceptionHandler.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/exception/ResourceNotFoundException.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/model/Policy.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/model/PolicyStatus.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/repository/PolicyCommandRepository.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/repository/PolicyQueryRepository.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/service/PolicyCommandService.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/service/PolicyCommandServiceImpl.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/service/PolicyQueryService.java
+/Users/oussamabenhrif/eclipse-workspace/policy/src/main/java/com/insurance/policy/service/PolicyQueryServiceImpl.java

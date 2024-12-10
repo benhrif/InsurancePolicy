@@ -1,0 +1,144 @@
+openapi: 3.0.0
+info:
+  title: Insurance Policy Management API
+  description: API documentation for managing insurance policies.
+  version: 1.0.0
+paths:
+  /api/policies:
+    post:
+      summary: Create a new insurance policy
+      requestBody:
+        description: Details of the policy to be created
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Policy'
+      responses:
+        '200':
+          description: The created insurance policy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Policy'
+    get:
+      summary: Retrieve all insurance policies with pagination
+      parameters:
+        - name: page
+          in: query
+          description: Page number
+          required: false
+          schema:
+            type: integer
+            default: 0
+        - name: size
+          in: query
+          description: Page size
+          required: false
+          schema:
+            type: integer
+            default: 5
+      responses:
+        '200':
+          description: Paginated list of insurance policies
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Policy'
+  /api/policies/{id}:
+    get:
+      summary: Retrieve an insurance policy by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Insurance policy ID
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: The requested insurance policy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Policy'
+        '404':
+          description: Policy not found
+    put:
+      summary: Update an existing insurance policy
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Insurance policy ID
+          schema:
+            type: integer
+      requestBody:
+        description: Details of the policy to be updated
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Policy'
+      responses:
+        '200':
+          description: The updated insurance policy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Policy'
+    delete:
+      summary: Delete an insurance policy by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Insurance policy ID
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Successful deletion
+components:
+  schemas:
+    Policy:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique identifier for the policy and auto generated
+        name:
+          type: string
+          description: Name of the policy
+          minLength: 1
+        status:
+          type: string
+          description: Current status of the policy
+          enum:
+            - ACTIVE
+            - INACTIVE
+        startDate:
+          type: string
+          format: date
+          description: Start date of the policy
+        endDate:
+          type: string
+          format: date
+          description: End date of the policy
+        createdDate:
+          type: string
+          format: date
+          description: Date when the policy was created
+        updatedDate:
+          type: string
+          format: date
+          description: Date when the policy was last updated
+      required:
+        - name
+        - status
+        - startDate
+        - endDate
+        - createdDate
+        - updatedDate
